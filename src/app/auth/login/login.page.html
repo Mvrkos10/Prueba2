@@ -1,0 +1,49 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="ion-text-center" color="dark">
+
+<br> <br>
+
+  <img src="https://cdn.freebiesupply.com/logos/large/2x/open-source-logo-png-transparent.png" height="150px">
+
+  <h2>Bienvenido</h2>
+
+  <form action="" [formGroup]="formulario" (ngSubmit)="enviar()" *ngIf="formulario">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item color="dark">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="username"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item color="dark">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item color="dark">
+          <ion-label>Recuerdame</ion-label>
+          <ion-toggle slot="end"></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" type="submit" color="primary"> Iniciar Sesion
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </form>
+
+</ion-content>

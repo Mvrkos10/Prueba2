@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="dark" class="ion-text-center">
+    <h2>Bienvenido</h2>
+  </ion-toolbar>
+
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button text="Salir" defaultHref="/login" (click)="presentAlert()" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content color="dark">
+
+  <ion-card color="dark">
+    <img [src]="image"/>
+    <ion-card-header>
+      <ion-chip color="primary">{{ gender | titlecase}}</ion-chip>
+      <ion-card-title>{{ firstName | titlecase }} {{ lastName | titlecase}} </ion-card-title>
+      <ion-card-subtitle>{{ username }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+     Contacto: <br>
+     {{ email }}
+    </ion-card-content>
+  </ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col><ion-button fill="outline" [routerLink]="['/productos']">Ir a Catalogo</ion-button></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

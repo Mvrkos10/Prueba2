@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark" class="ion-text-center">
+    <h2>Catalogo</h2>
+  </ion-toolbar>
+
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button text="perfil"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content color="dark">
+
+<div *ngIf="datosProductos">
+  <ion-item button color="dark" *ngFor="let item of datosProductos.products">
+    <ion-avatar slot="start">
+      <img [src]="item.thumbnail" alt="">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{item.title}}</h2>
+
+      <p>
+        <ion-text color="primary">
+          ${{item.price}}
+        </ion-text>
+      </p>
+
+      <p>
+        <ion-text color="success">
+          {{item.discountPercentage}}%
+        </ion-text>
+      </p>
+
+    </ion-label>
+  </ion-item>
+</div>
+
+
+</ion-content>
